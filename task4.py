@@ -1,6 +1,6 @@
-# Task 4: Party Invite List
+"""# Task 4: Party Invite List
 def invite_guests(invite_list, guests, special_notes):
-    """
+    
     Add guests to a party invite list, with optional special notes for VIPs.
     
     Parameters:
@@ -13,3 +13,14 @@ def invite_guests(invite_list, guests, special_notes):
         invites = []
         invite_guests(invites, "John", "Mary", Peter="Needs wheelchair access")
     """
+
+def invite_guests(invite_list, *guests, **special_notes):
+    for guest in guests:
+        invites.append(guest)
+
+    invites.append(special_notes)
+
+    return invites
+
+invites = []
+print(invite_guests(invites, "John", "Mary", Peter="Needs wheelchair access"))

@@ -13,11 +13,12 @@ def add_groceries(grocery_list, items):
     """
 
 def add_groceries(grocery_list, *items):
-    grocery_list.append(items)
-    print(groceries)
+    for item in items:
+        grocery_list.append(item)
+    return groceries
 
 groceries = []
-add_groceries(groceries, "Tomato", "Bread", "Milk")
+print(add_groceries(groceries, "Tomato", "Bread", "Milk"))
 
 
 

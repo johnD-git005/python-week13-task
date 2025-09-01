@@ -1,6 +1,6 @@
-#  Task 3: Expense Tracker
+"""#  Task 3: Expense Tracker
 def record_expenses(expenses, items):
-    """
+    
     Record multiple expenses in a temporary expense dictionary.
     
     Parameters:
@@ -12,3 +12,14 @@ def record_expenses(expenses, items):
         record_expenses(expenses, food=2500, transport=1500, books=3000)
        print(expenses[“food”]) # should return 2500 
     """
+
+def record_expenses(expenses, **items):
+
+    for key, value in items.items():
+        expenses[key] = value
+    return expenses
+    
+expenses = {}
+print(record_expenses(expenses, food=2500, transport=1500, books=3000))
+print(expenses["food"])
+
