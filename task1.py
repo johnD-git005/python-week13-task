@@ -1,6 +1,6 @@
-# 📝 Task 1: Grocery List Manager
+"""# 📝 Task 1: Grocery List Manager
 def add_groceries(grocery_list, items):
-    """
+    
     Add multiple grocery items into the grocery list.
     
     Parameters:
@@ -11,4 +11,13 @@ def add_groceries(grocery_list, items):
         groceries = []
         add_groceries(groceries, "Tomato", "Bread", "Milk")
     """
+
+def add_groceries(grocery_list, *items):
+    grocery_list.append(items)
+    print(groceries)
+
+groceries = []
+add_groceries(groceries, "Tomato", "Bread", "Milk")
+
+
 
